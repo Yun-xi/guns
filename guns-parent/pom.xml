@@ -13,6 +13,9 @@
         <module>../guns-core</module>
         <module>../guns-rest</module>
         <module>../guns-generator</module>
+        <module>../guns-gateway</module>
+        <module>../guns-api</module>
+        <module>../guns-user</module>
     </modules>
 
     <parent>
@@ -61,6 +64,11 @@
             <dependency>
                 <groupId>com.stylefeng</groupId>
                 <artifactId>guns-core</artifactId>
+                <version>${guns.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.stylefeng</groupId>
+                <artifactId>guns-api</artifactId>
                 <version>${guns.version}</version>
             </dependency>
 
