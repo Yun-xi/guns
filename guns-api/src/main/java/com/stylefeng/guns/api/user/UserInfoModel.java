@@ -1,6 +1,5 @@
 package com.stylefeng.guns.api.user;
 
-import java.util.Date;
 
 public class UserInfoModel {
 
