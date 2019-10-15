@@ -11,6 +11,8 @@ import com.stylefeng.guns.rest.common.persistence.model.MoocUserT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
+
 @Component
 @Service(interfaceClass = UserAPI.class)
 public class UserServiceImpl implements UserAPI {
@@ -81,9 +83,36 @@ public class UserServiceImpl implements UserAPI {
         }
     }
 
+    private UserInfoModel do2UserInfo(MoocUserT moocUserT) {
+        UserInfoModel userInfoModel = new UserInfoModel();
+
+        userInfoModel.setUsername(moocUserT.getUserName());
+        userInfoModel.setUpdateTime(moocUserT.getUpdateTime().getTime());
+        userInfoModel.setSex(moocUserT.getUserSex());
+        userInfoModel.setPhone(moocUserT.getUserPhone());
+        userInfoModel.setNickname(moocUserT.getNickName());
+        userInfoModel.setLifeSate("" + moocUserT.getLifeState());
+        userInfoModel.setHeadAddress(moocUserT.getHeadUrl());
+        userInfoModel.setEmail(moocUserT.getEmail());
+        userInfoModel.setBirthday(moocUserT.getBirthday());
+        userInfoModel.setBiography(moocUserT.getBiography());
+        userInfoModel.setBeginTime(moocUserT.getBeginTime().getTime());
+        userInfoModel.setAddress(moocUserT.getAddress());
+
+        return userInfoModel;
+    }
+
     @Override
     public UserInfoModel getUserInfo(int uuid) {
-        return null;
+
+        // 根据主键查询用户信息[MoocUserT]
+        MoocUserT moocUserT = moocUserTMapper.selectById(uuid);
+
+        // 将MoocUserT转换UserInfoModel
+        UserInfoModel userInfoModel = do2UserInfo(moocUserT);
+
+        // 返回UserInfoModel
+        return userInfoModel;
     }
 
     @Override
