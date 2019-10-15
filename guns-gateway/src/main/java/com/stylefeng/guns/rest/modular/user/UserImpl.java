@@ -12,6 +12,11 @@ public class UserImpl implements UserAPI {
     private UserAPI userAPI;
 
     @Override
+    public boolean login(UserModel userModel) {
+        return false;
+    }
+
+    @Override
     public int login(String username, String password) {
         return 0;
     }
