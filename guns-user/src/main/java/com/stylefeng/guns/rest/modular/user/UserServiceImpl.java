@@ -115,8 +115,38 @@ public class UserServiceImpl implements UserAPI {
         return userInfoModel;
     }
 
+    private Date time2Date(long time) {
+        Date date = new Date(time);
+
+        return date;
+    }
+
     @Override
     public UserInfoModel updateUserInfo(UserInfoModel userInfoModel) {
-        return null;
+        // 将传入的数据转换为MoocUserT
+        MoocUserT moocUserT = new MoocUserT();
+        moocUserT.setUuid(userInfoModel.getUuid());
+        moocUserT.setNickName(userInfoModel.getNickname());
+        moocUserT.setLifeState(Integer.parseInt(userInfoModel.getLifeSate()));
+        moocUserT.setBirthday(userInfoModel.getBirthday());
+        moocUserT.setBiography(userInfoModel.getBiography());
+        moocUserT.setBeginTime(time2Date(userInfoModel.getBeginTime()));
+        moocUserT.setHeadUrl(userInfoModel.getHeadAddress());
+        moocUserT.setEmail(userInfoModel.getEmail());
+        moocUserT.setAddress(userInfoModel.getAddress());
+        moocUserT.setUserPhone(userInfoModel.getPhone());
+        moocUserT.setUserSex(userInfoModel.getSex());
+        moocUserT.setUpdateTime(time2Date(System.currentTimeMillis()));
+
+        // 将数据存入数据库
+        Integer isSuccess = moocUserTMapper.updateById(moocUserT);
+        if (isSuccess > 0) {
+            // 按照ID将用户信息查出来
+            UserInfoModel userInfo = getUserInfo(moocUserT.getUuid());
+            // 返回给前端
+            return userInfo;
+        } else {
+            return userInfoModel;
+        }
     }
 }
