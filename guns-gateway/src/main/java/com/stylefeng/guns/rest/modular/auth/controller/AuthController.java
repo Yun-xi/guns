@@ -40,7 +40,6 @@ public class AuthController {
         boolean validate = true;
         // 去掉guns自身携带的用户名密码验证机制，使用我们自己的
         int userId = userAPI.login(authRequest.getUserName(), authRequest.getPassword());
-        userId = 3;
         if (userId == 0) {
             validate = false;
         }

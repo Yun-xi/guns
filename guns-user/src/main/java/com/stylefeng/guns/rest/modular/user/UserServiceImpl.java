@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserAPI {
     private MoocUserTMapper moocUserTMapper;
 
     @Override
-    public boolean login(UserModel userModel) {
+    public boolean register(UserModel userModel) {
         // 将注册信息实体转换为数据实体
         MoocUserT moocUserT = new MoocUserT();
         moocUserT.setUserName(userModel.getUsername());
@@ -62,12 +62,6 @@ public class UserServiceImpl implements UserAPI {
         }
 
         return 0;
-    }
-
-    @Override
-    public boolean register(UserModel userModel) {
-
-        return false;
     }
 
     @Override
