@@ -2,8 +2,10 @@ com\stylefeng\guns\rest\modular\auth\validator\impl\SimpleValidator.class
 com\stylefeng\guns\rest\GunsRestServletInitializer.class
 com\stylefeng\guns\rest\modular\auth\controller\dto\AuthRequest.class
 com\stylefeng\guns\rest\common\persistence\dao\UserMapper.class
+com\stylefeng\guns\rest\modular\vo\ResponseVO.class
 com\stylefeng\guns\rest\config\MybatisPlusConfig.class
 com\stylefeng\guns\rest\modular\user\UserImpl.class
+com\stylefeng\guns\rest\modular\user\UserController.class
 com\stylefeng\guns\rest\modular\auth\util\JwtTokenUtil.class
 com\stylefeng\guns\rest\GatewayApplication.class
 com\stylefeng\guns\rest\modular\auth\validator\impl\DbValidator.class
@@ -16,6 +18,7 @@ com\stylefeng\guns\rest\modular\client\Client.class
 com\stylefeng\guns\rest\common\exception\BussinessException.class
 com\stylefeng\guns\rest\common\exception\BizExceptionEnum.class
 com\stylefeng\guns\rest\modular\auth\security\DataSecurityAction.class
+com\stylefeng\guns\rest\common\CurrentUser.class
 com\stylefeng\guns\rest\common\persistence\model\User.class
 com\stylefeng\guns\rest\modular\auth\security\impl\Base64SecurityAction.class
 com\stylefeng\guns\rest\modular\auth\validator\dto\Credence.class

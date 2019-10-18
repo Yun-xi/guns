@@ -1,13 +1,14 @@
+com\stylefeng\guns\rest\modular\user\UserServiceImpl.class
 com\stylefeng\guns\rest\modular\auth\validator\impl\SimpleValidator.class
 com\stylefeng\guns\rest\GunsRestServletInitializer.class
 com\stylefeng\guns\rest\modular\auth\controller\dto\AuthRequest.class
 com\stylefeng\guns\rest\common\persistence\dao\UserMapper.class
 com\stylefeng\guns\rest\config\MybatisPlusConfig.class
-com\stylefeng\guns\rest\modular\user\UserImpl.class
 com\stylefeng\guns\rest\modular\auth\util\JwtTokenUtil.class
 com\stylefeng\guns\rest\modular\auth\validator\impl\DbValidator.class
 com\stylefeng\guns\rest\modular\auth\controller\AuthController.class
 com\stylefeng\guns\rest\modular\auth\validator\IReqValidator.class
+com\stylefeng\guns\rest\common\persistence\model\MoocUserT.class
 com\stylefeng\guns\rest\modular\auth\filter\AuthFilter.class
 com\stylefeng\guns\rest\modular\auth\converter\BaseTransferEntity.class
 com\stylefeng\guns\rest\config\properties\JwtProperties.class
@@ -23,6 +24,7 @@ com\stylefeng\guns\rest\modular\auth\controller\dto\AuthResponse.class
 com\stylefeng\guns\rest\common\SimpleObject.class
 com\stylefeng\guns\rest\common\aop\GlobalExceptionHandler.class
 com\stylefeng\guns\rest\config\properties\RestProperties.class
+com\stylefeng\guns\rest\common\persistence\dao\MoocUserTMapper.class
 com\stylefeng\guns\rest\config\WebConfig.class
 com\stylefeng\guns\rest\modular\auth\converter\WithSignMessageConverter.class
 com\stylefeng\guns\rest\modular\example\ExampleController.class
