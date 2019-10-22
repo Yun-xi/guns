@@ -167,16 +167,31 @@ public class FilmController {
         // 根据showType判断影片查询类型
         switch (filmRequestVO.getShowType()) {
             case 1 :
-
+                filmVO = filmServiceApi.getHotFilms(false, filmRequestVO.getPageSize(), filmRequestVO.getNowPage(),
+                        filmRequestVO.getSortId(), filmRequestVO.getSourceId(), filmRequestVO.getYearId(),
+                        filmRequestVO.getCatId());
+                break;
             case 2 :
+                filmVO = filmServiceApi.getSoonFilms(false, filmRequestVO.getPageSize(), filmRequestVO.getNowPage(),
+                        filmRequestVO.getSortId(), filmRequestVO.getSourceId(), filmRequestVO.getYearId(),
+                        filmRequestVO.getCatId());
+                break;
             case 3 :
+                filmVO = filmServiceApi.getClassicFilms( filmRequestVO.getPageSize(), filmRequestVO.getNowPage(),
+                        filmRequestVO.getSortId(), filmRequestVO.getSourceId(), filmRequestVO.getYearId(),
+                        filmRequestVO.getCatId());
+                break;
             default:
+                filmVO = filmServiceApi.getHotFilms(false, filmRequestVO.getPageSize(), filmRequestVO.getNowPage(),
+                        filmRequestVO.getSortId(), filmRequestVO.getSourceId(), filmRequestVO.getYearId(),
+                        filmRequestVO.getCatId());
+                break;
         }
 
         // 根据sortId排序
         // 添加各种条件查询
         // 判断当前是第几页
 
-        return null;
+        return ResponseVO.success(filmVO.getNowPage(), filmVO.getTotalPage(), IMG_PRE, filmVO.getFilmInfoList());
     }
 }

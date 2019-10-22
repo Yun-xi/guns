@@ -16,6 +16,7 @@ com\stylefeng\guns\rest\modular\auth\validator\IReqValidator.class
 com\stylefeng\guns\rest\modular\auth\filter\AuthFilter.class
 com\stylefeng\guns\rest\modular\auth\converter\BaseTransferEntity.class
 com\stylefeng\guns\rest\config\properties\JwtProperties.class
+com\stylefeng\guns\rest\modular\film\vo\FilmRequestVO.class
 com\stylefeng\guns\rest\modular\client\Client.class
 com\stylefeng\guns\rest\common\exception\BussinessException.class
 com\stylefeng\guns\rest\common\exception\BizExceptionEnum.class

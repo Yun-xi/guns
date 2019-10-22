@@ -22,7 +22,22 @@ public class ResponseVO<M> {
     // 图片前缀
     private String imgPre;
 
+    // 分页
+    private int nowPage;
+    private int totalPage;
+
     private ResponseVO(){}
+
+    public static<M> ResponseVO success(int nowPage, int totalPage, String imgPre, M m) {
+        ResponseVO responseVO = new ResponseVO();
+        responseVO.setStatus(0);
+        responseVO.setData(m);
+        responseVO.setImgPre(imgPre);
+        responseVO.setNowPage(nowPage);
+        responseVO.setTotalPage(totalPage);
+
+        return responseVO;
+    }
 
     public static<M> ResponseVO success(String imgPre, M m) {
         ResponseVO responseVO = new ResponseVO();
