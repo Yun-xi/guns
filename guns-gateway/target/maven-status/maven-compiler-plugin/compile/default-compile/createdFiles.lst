@@ -1,6 +1,7 @@
 com\stylefeng\guns\rest\modular\auth\validator\impl\SimpleValidator.class
 com\stylefeng\guns\rest\GunsRestServletInitializer.class
 com\stylefeng\guns\rest\modular\auth\controller\dto\AuthRequest.class
+com\stylefeng\guns\rest\modular\film\vo\FilmIndexVO.class
 com\stylefeng\guns\rest\common\persistence\dao\UserMapper.class
 com\stylefeng\guns\rest\modular\vo\ResponseVO.class
 com\stylefeng\guns\rest\config\MybatisPlusConfig.class
@@ -9,6 +10,7 @@ com\stylefeng\guns\rest\modular\user\UserController.class
 com\stylefeng\guns\rest\modular\auth\util\JwtTokenUtil.class
 com\stylefeng\guns\rest\GatewayApplication.class
 com\stylefeng\guns\rest\modular\auth\validator\impl\DbValidator.class
+com\stylefeng\guns\rest\modular\film\FilmController.class
 com\stylefeng\guns\rest\modular\auth\controller\AuthController.class
 com\stylefeng\guns\rest\modular\auth\validator\IReqValidator.class
 com\stylefeng\guns\rest\modular\auth\filter\AuthFilter.class

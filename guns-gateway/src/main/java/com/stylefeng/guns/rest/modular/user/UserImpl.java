@@ -1,10 +1,9 @@
 package com.stylefeng.guns.rest.modular.user;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.alibaba.dubbo.config.annotation.Service;
 import com.stylefeng.guns.api.user.UserAPI;
-import com.stylefeng.guns.api.user.UserInfoModel;
-import com.stylefeng.guns.api.user.UserModel;
+import com.stylefeng.guns.api.user.vo.UserInfoModel;
+import com.stylefeng.guns.api.user.vo.UserModel;
 import org.springframework.stereotype.Component;
 
 @Component

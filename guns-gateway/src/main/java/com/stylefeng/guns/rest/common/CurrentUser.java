@@ -1,7 +1,5 @@
 package com.stylefeng.guns.rest.common;
 
-import com.stylefeng.guns.api.user.UserInfoModel;
-
 /**
  * @author xieyaqi
  * @mail 987159036@qq.com
