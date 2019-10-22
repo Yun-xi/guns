@@ -2,9 +2,17 @@ package com.stylefeng.guns.rest.modular.film;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.stylefeng.guns.api.film.FilmServiceApi;
+import com.stylefeng.guns.api.film.vo.CatVO;
+import com.stylefeng.guns.api.film.vo.SourceVO;
+import com.stylefeng.guns.api.film.vo.YearVO;
+import com.stylefeng.guns.rest.modular.film.vo.FilmConditionVO;
 import com.stylefeng.guns.rest.modular.film.vo.FilmIndexVO;
+import com.stylefeng.guns.rest.modular.film.vo.FilmRequestVO;
 import com.stylefeng.guns.rest.modular.vo.ResponseVO;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author xieyaqi
@@ -59,13 +67,108 @@ public class FilmController {
     public ResponseVO getConditionList(@RequestParam(name = "catId", required = false, defaultValue = "99") String catId,
                                        @RequestParam(name = "sourceId", required = false, defaultValue = "99") String sourceId,
                                        @RequestParam(name = "yearId", required = false, defaultValue = "99") String yearId) {
+        FilmConditionVO filmConditionVO = new FilmConditionVO();
+
+        // 标识位
+        boolean flag = false;
 
         // 类型集合
+        List<CatVO> cats = filmServiceApi.getCats();
+        List<CatVO> catResult = new ArrayList<>();
+        CatVO cat = null;
+        for (CatVO catVo : cats) {
+            // 判断是否存在catId，如果存在，则将对应的实体变成active状态
+            if (catVo.getCatId().equals("99")) {
+                cat = catVo;
+                continue;
+            }
+            if (catVo.getCatId().equals(catId)) {
+                flag = true;
+                catVo.setActive(true);
+            } else {
+                catVo.setActive(false);
+            }
+            catResult.add(catVo);
+        }
+        // 如果不存在，则默认将【全部】变成Active状态
+        if (!flag) {
+            cat.setActive(true);
+            catResult.add(cat);
+        } else {
+            cat.setActive(false);
+            catResult.add(cat);
+        }
+
 
         // 片源集合
+        flag = false;
+        List<SourceVO> sources = filmServiceApi.getSources();
+        List<SourceVO> sourceResult = new ArrayList<>();
+        SourceVO source = null;
+        for (SourceVO sourceVO : sources) {
+            if (sourceVO.getSourceId().equals("99")) {
+                source = sourceVO;
+                continue;
+            }
+            if (sourceVO.getSourceId().equals(sourceId)) {
+                flag = true;
+                sourceVO.setActive(true);
+            } else {
+                sourceVO.setActive(false);
+            }
+            sourceResult.add(sourceVO);
+        }
+        if (!flag) {
+            source.setActive(true);
+            sourceResult.add(source);
+        } else {
+            source.setActive(false);
+            sourceResult.add(source);
+        }
 
         // 年代集合
+        flag = false;
+        List<YearVO> years = filmServiceApi.getYears();
+        List<YearVO> yearResult = new ArrayList<>();
+        YearVO year = null;
+        for (YearVO yearVO : years) {
+            if (yearVO.getYearId().equals("99")) {
+                year = yearVO;
+                continue;
+            }
+            if (yearVO.getYearId().equals(yearId)) {
+                flag = true;
+                yearVO.setActive(true);
+            } else {
+                yearVO.setActive(false);
+            }
+            yearResult.add(yearVO);
+        }
+        if (!flag) {
+            year.setActive(true);
+            yearResult.add(year);
+        } else {
+            year.setActive(false);
+            yearResult.add(year);
+        }
 
+        filmConditionVO.setCatInfo(catResult);
+        filmConditionVO.setSourceInfo(sourceResult);
+        filmConditionVO.setYearInfo(yearResult);
+
+        return ResponseVO.success(filmConditionVO);
+    }
+
+    @GetMapping("getFims")
+    public ResponseVO getFilms(FilmRequestVO filmRequestVO) {
+
+        // 根据showType判断影片查询类型
+
+        // 根据sortId排序
+
+        // 添加各种条件查询
+
+        // 判断当前是第几页
 
         return null;
     }

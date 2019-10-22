@@ -1,7 +1,10 @@
+com\stylefeng\guns\api\film\vo\SourceVO.class
+com\stylefeng\guns\api\film\vo\CatVO.class
 com\stylefeng\guns\api\film\FilmServiceApi.class
 com\stylefeng\guns\api\film\vo\BannerVO.class
 com\stylefeng\guns\api\film\vo\FilmVO.class
 com\stylefeng\guns\api\user\vo\UserInfoModel.class
+com\stylefeng\guns\api\film\vo\YearVO.class
 com\stylefeng\guns\api\user\UserAPI.class
 com\stylefeng\guns\api\user\vo\UserModel.class
 com\stylefeng\guns\api\film\vo\FilmInfo.class

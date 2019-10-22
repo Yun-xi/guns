@@ -22,6 +22,7 @@ com\stylefeng\guns\rest\common\exception\BizExceptionEnum.class
 com\stylefeng\guns\rest\modular\auth\security\DataSecurityAction.class
 com\stylefeng\guns\rest\common\CurrentUser.class
 com\stylefeng\guns\rest\common\persistence\model\User.class
+com\stylefeng\guns\rest\modular\film\vo\FilmConditionVO.class
 com\stylefeng\guns\rest\modular\auth\security\impl\Base64SecurityAction.class
 com\stylefeng\guns\rest\modular\auth\validator\dto\Credence.class
 com\stylefeng\guns\rest\config\MessageConverConfig.class
