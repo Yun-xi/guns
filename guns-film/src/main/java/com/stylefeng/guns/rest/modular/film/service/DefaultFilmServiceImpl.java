@@ -346,4 +346,18 @@ public class DefaultFilmServiceImpl implements FilmServiceApi {
 
         return years;
     }
+
+    @Override
+    public FilmDetailVO getFilmDetail(int searchType, String searchParam) {
+        FilmDetailVO filmDetailVO;
+
+        // searchType 1 - 按名称   2 - 按ID
+        if (searchType == 1) {
+            filmDetailVO = moocFilmTMapper.getFilmDetailByName(searchParam);
+        } else {
+            filmDetailVO = moocFilmTMapper.getFilmDetailById(searchParam);
+        }
+
+        return filmDetailVO;
+    }
 }
