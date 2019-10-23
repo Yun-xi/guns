@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.stylefeng.guns</groupId>
-	<artifactId>guns-user</artifactId>
+	<artifactId>guns-cinema</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>guns-user</name>
+	<name>guns-cinema</name>
 	<description>guns 用户模块</description>
 
 	<parent>

@@ -12,6 +12,8 @@ import java.io.Serializable;
 @Data
 public class FilmDetailVO implements Serializable {
 
+    private String filmId;
+
     private String filmName;
 
     private String filmEnName;
@@ -29,4 +31,6 @@ public class FilmDetailVO implements Serializable {
     private String info02;
 
     private String info03;
+
+    private InfoRequestVO info04;
 }
