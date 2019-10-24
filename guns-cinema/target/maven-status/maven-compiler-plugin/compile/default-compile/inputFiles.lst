@@ -8,16 +8,16 @@ D:\guns\guns-cinema\src\main\java\TTT\MoocYearDictTController.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\common\persistence\dao\MoocFilmTMapper.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\common\persistence\model\MoocBannerT.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\common\persistence\model\MoocYearDictT.java
-D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\modular\film\service\DefaultFilmServiceImpl.java
 D:\guns\guns-cinema\src\main\java\TTT\MoocActorTServiceImpl.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\config\MybatisPlusConfig.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\config\properties\JwtProperties.java
-D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\FilmApplication.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\common\persistence\model\MoocActorT.java
 D:\guns\guns-cinema\src\main\java\TTT\MoocCatDictTServiceImpl.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\common\persistence\model\MoocCatDictT.java
+D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\modular\cinema\service\DefaultCinemaServiceImpl.java
 D:\guns\guns-cinema\src\main\java\TTT\MoocFilmTServiceImpl.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\common\exception\BussinessException.java
+D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\CinemaApplication.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\modular\auth\filter\AuthFilter.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\modular\auth\validator\dto\Credence.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\modular\auth\util\JwtTokenUtil.java
@@ -41,7 +41,6 @@ D:\guns\guns-cinema\src\main\java\TTT\MoocYearDictTServiceImpl.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\common\persistence\dao\MoocFilmInfoTMapper.java
 D:\guns\guns-cinema\src\main\java\TTT\MoocSourceDictTController.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\modular\auth\controller\AuthController.java
-D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\modular\film\service\DefaultFilmAsyncServiceImpl.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\modular\auth\controller\dto\AuthRequest.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\modular\auth\converter\BaseTransferEntity.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\common\persistence\model\MoocFilmActorT.java

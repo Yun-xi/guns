@@ -1,5 +1,4 @@
 com\stylefeng\guns\rest\common\persistence\model\MoocSourceDictT.class
-com\stylefeng\guns\rest\FilmApplication.class
 TTT\MoocCatDictTController.class
 TTT\IMoocFilmTService.class
 TTT\IMoocSourceDictTService.class
@@ -7,7 +6,6 @@ com\stylefeng\guns\rest\modular\auth\controller\dto\AuthRequest.class
 TTT\IMoocYearDictTService.class
 com\stylefeng\guns\rest\modular\auth\validator\IReqValidator.class
 com\stylefeng\guns\rest\modular\auth\filter\AuthFilter.class
-com\stylefeng\guns\rest\modular\film\service\DefaultFilmServiceImpl.class
 com\stylefeng\guns\rest\common\exception\BussinessException.class
 TTT\MoocBannerTServiceImpl.class
 com\stylefeng\guns\rest\common\exception\BizExceptionEnum.class
@@ -22,6 +20,7 @@ com\stylefeng\guns\rest\common\persistence\dao\MoocSourceDictTMapper.class
 com\stylefeng\guns\rest\common\persistence\model\MoocBannerT.class
 com\stylefeng\guns\rest\common\persistence\dao\MoocYearDictTMapper.class
 TTT\IMoocActorTService.class
+com\stylefeng\guns\rest\CinemaApplication.class
 com\stylefeng\guns\rest\common\aop\GlobalExceptionHandler.class
 com\stylefeng\guns\rest\config\properties\RestProperties.class
 com\stylefeng\guns\rest\common\persistence\model\MoocFilmT.class
@@ -32,7 +31,6 @@ com\stylefeng\guns\rest\common\persistence\model\MoocFilmInfoT.class
 com\stylefeng\guns\rest\modular\auth\validator\impl\SimpleValidator.class
 com\stylefeng\guns\rest\common\persistence\dao\MoocCatDictTMapper.class
 com\stylefeng\guns\rest\GunsRestServletInitializer.class
-com\stylefeng\guns\rest\modular\film\service\DefaultFilmAsyncServiceImpl.class
 com\stylefeng\guns\rest\common\persistence\dao\MoocFilmTMapper.class
 com\stylefeng\guns\rest\common\persistence\model\MoocFilmActorT.class
 TTT\MoocSourceDictTServiceImpl.class
@@ -63,3 +61,4 @@ com\stylefeng\guns\rest\common\SimpleObject.class
 com\stylefeng\guns\rest\common\persistence\model\MoocCatDictT.class
 com\stylefeng\guns\rest\common\persistence\model\MoocYearDictT.class
 com\stylefeng\guns\rest\modular\auth\converter\WithSignMessageConverter.class
+com\stylefeng\guns\rest\modular\cinema\service\DefaultCinemaServiceImpl.class

@@ -21,6 +21,7 @@ D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\common\persistence\mo
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\auth\security\DataSecurityAction.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\common\exception\BizExceptionEnum.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\auth\validator\dto\Credence.java
+D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\cinema\CinemaController.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\auth\controller\dto\AuthRequest.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\user\UserImpl.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\config\MybatisPlusConfig.java

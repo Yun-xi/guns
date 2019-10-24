@@ -21,6 +21,9 @@ public class CinemaController {
     @GetMapping("getCinemas")
     public ResponseVO getCinemas(CinemaQueryVO cinemaQueryVO) {
 
+        // 按照五个条件筛选
+
+
         return null;
     }
 

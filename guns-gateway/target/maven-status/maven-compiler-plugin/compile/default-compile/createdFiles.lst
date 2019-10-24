@@ -32,5 +32,6 @@ com\stylefeng\guns\rest\common\SimpleObject.class
 com\stylefeng\guns\rest\common\aop\GlobalExceptionHandler.class
 com\stylefeng\guns\rest\config\properties\RestProperties.class
 com\stylefeng\guns\rest\config\WebConfig.class
+com\stylefeng\guns\rest\modular\cinema\CinemaController.class
 com\stylefeng\guns\rest\modular\auth\converter\WithSignMessageConverter.class
 com\stylefeng\guns\rest\modular\example\ExampleController.class
