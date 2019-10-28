@@ -49,6 +49,14 @@ public class CinemaController {
         }
     }
 
+    /**
+     * 获取影院的查询条件
+     *
+     * 1、热点数据 -> 放缓存
+     *
+     * @param cinemaQueryVO
+     * @return
+     */
     @GetMapping("getCondition")
     public ResponseVO getCondition(CinemaQueryVO cinemaQueryVO) {
 
