@@ -216,28 +216,29 @@ public class DefaultCinemaServiceImpl implements CinemaServiceAPI {
         cinemaInfoVO.setImgUrl(moocCinemaT.getImgAddress());
         cinemaInfoVO.setCinemaPhone(moocCinemaT.getCinemaPhone());
         cinemaInfoVO.setCinemaName(moocCinemaT.getCinemaName());
-        cinemaInfoVO.setCinemaId(moocCinemaT.getUuid() + '');
+        cinemaInfoVO.setCinemaId(moocCinemaT.getUuid() + "");
 
         return cinemaInfoVO;
     }
 
-    /**
-     * 6-13
-     * @param cinemaId
-     * @return
-     */
     @Override
-    public FilmInfoVO getFilmInfoByCinemaId(int cinemaId) {
-        return null;
+    public List<FilmInfoVO> getFilmInfoByCinemaId(int cinemaId) {
+        List<FilmInfoVO> filmInfos = moocFieldTMapper.getFilmInfos(cinemaId);
+
+        return filmInfos;
     }
 
     @Override
-    public FilmFieldVO getFilmFieldInfo(int fieldId) {
-        return null;
+    public HallInfoVO getFilmFieldInfo(int fieldId) {
+        HallInfoVO hallInfoVO = moocFieldTMapper.getHallInfo(fieldId);
+
+        return hallInfoVO;
     }
 
     @Override
     public FilmInfoVO getFilmInfoByFieldId(int fieldId) {
-        return null;
+        FilmInfoVO filmInfoVO = moocFieldTMapper.getFilmInfoById(fieldId);
+
+        return filmInfoVO;
     }
 }
