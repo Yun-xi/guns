@@ -1,11 +1,12 @@
 package com.stylefeng.guns.rest.common.util;
 
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.net.ftp.FTPClient;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
-import java.awt.*;
 import java.io.BufferedReader;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
@@ -13,14 +14,17 @@ import java.io.InputStreamReader;
  * @mail xieyaqi11@gmail.com
  * @date 2019-10-29 17:44
  */
+@Data
 @Slf4j
+@Configuration
+@ConfigurationProperties(prefix = "ftp")
 public class FTPUtil {
 
     // 地址 端口 用户名 密码
-    private String hostName = "192.168.1.158";
-    private Integer port = 21;
-    private String userName = "ftp";
-    private String password = "ftp";
+    private String hostName;
+    private Integer port;
+    private String userName;
+    private String password;
 
     private FTPClient ftpClient = null;
 
@@ -53,15 +57,7 @@ public class FTPUtil {
             ftpClient.logout();
         } catch (Exception e) {
             log.error("获取文件信息失败", e);
-        } finally {
-
         }
         return stringBuffer.toString();
-    }
-
-    public static void main(String[] args) {
-        FTPUtil ftpUtil = new FTPUtil();
-        String fileStrByAddress = ftpUtil.getFileStrByAddress("seats/cgs.json");
-        System.out.println(fileStrByAddress);
     }
 }

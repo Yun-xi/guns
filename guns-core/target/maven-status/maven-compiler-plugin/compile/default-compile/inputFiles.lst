@@ -35,6 +35,7 @@ D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\base\controller\GunsErro
 D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\mutidatasource\aop\MultiSourceExAop.java
 D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\qr\ImgQrTool.java
 D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\util\ResKit.java
+D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\util\UUIDUtil.java
 D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\mutidatasource\annotion\DataSource.java
 D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\support\exception\ToolBoxException.java
 D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\mutidatasource\config\MutiDataSourceProperties.java

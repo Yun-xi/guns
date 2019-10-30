@@ -1,4 +1,6 @@
+com\stylefeng\guns\api\order\vo\OrderVO.class
 com\stylefeng\guns\api\film\vo\FilmDetailVO.class
+com\stylefeng\guns\api\order\OrderServiceAPI.class
 com\stylefeng\guns\api\cinema\vo\AreaVO.class
 com\stylefeng\guns\api\cinema\vo\BrandVO.class
 com\stylefeng\guns\api\film\vo\BannerVO.class
@@ -19,6 +21,7 @@ com\stylefeng\guns\api\cinema\vo\FilmInfoVO.class
 com\stylefeng\guns\api\film\vo\FilmDescVO.class
 com\stylefeng\guns\api\cinema\vo\FilmFieldVO.class
 com\stylefeng\guns\api\film\FilmServiceApi.class
+com\stylefeng\guns\api\cinema\vo\OrderQueryVO.class
 com\stylefeng\guns\api\film\vo\ActorRequestVO.class
 com\stylefeng\guns\api\film\vo\CatVO.class
 com\stylefeng\guns\api\cinema\CinemaServiceAPI.class

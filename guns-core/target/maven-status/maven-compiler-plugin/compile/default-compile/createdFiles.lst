@@ -75,3 +75,4 @@ com\stylefeng\guns\core\util\ResKit.class
 com\stylefeng\guns\core\constant\IsMenu.class
 com\stylefeng\guns\core\exception\GunsExceptionEnum.class
 com\stylefeng\guns\core\support\BeanKit$CopyOptions.class
+com\stylefeng\guns\core\util\UUIDUtil.class

@@ -28,6 +28,7 @@ D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\cinema\vo\Cin
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\auth\controller\dto\AuthRequest.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\cinema\vo\CinemaFieldsResponseVO.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\user\UserImpl.java
+D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\order\OrderController.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\config\MybatisPlusConfig.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\user\UserController.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\common\SimpleObject.java
