@@ -168,7 +168,7 @@ public class MoocOrder2018T extends Model<MoocOrder2018T> {
 
 	@Override
 	protected Serializable pkVal() {
-		return this.id;
+		return this.uuid;
 	}
 
 	@Override
