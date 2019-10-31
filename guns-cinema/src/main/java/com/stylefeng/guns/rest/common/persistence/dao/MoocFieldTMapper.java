@@ -1,7 +1,9 @@
 package com.stylefeng.guns.rest.common.persistence.dao;
 
+import com.stylefeng.guns.api.cinema.vo.HallInfoVO;
 import com.stylefeng.guns.rest.common.persistence.model.MoocFieldT;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  */
 public interface MoocFieldTMapper extends BaseMapper<MoocFieldT> {
 
+    HallInfoVO getHallInfo(@Param("fieldId") int fieldId);
 }
