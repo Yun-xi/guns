@@ -5,8 +5,10 @@ D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\common\exception\Buss
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\GatewayApplication.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\film\FilmController.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\film\vo\FilmIndexVO.java
+D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\cinema\vo\CinemaConditionResponseVO.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\auth\util\JwtTokenUtil.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\auth\security\impl\Base64SecurityAction.java
+D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\cinema\vo\CinemaFieldResponseVO.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\client\Client.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\config\properties\JwtProperties.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\common\aop\GlobalExceptionHandler.java
@@ -22,8 +24,11 @@ D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\auth\security
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\common\exception\BizExceptionEnum.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\auth\validator\dto\Credence.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\cinema\CinemaController.java
+D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\cinema\vo\CinemaListResponseVO.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\auth\controller\dto\AuthRequest.java
+D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\cinema\vo\CinemaFieldsResponseVO.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\user\UserImpl.java
+D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\order\OrderController.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\config\MybatisPlusConfig.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\user\UserController.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\common\SimpleObject.java

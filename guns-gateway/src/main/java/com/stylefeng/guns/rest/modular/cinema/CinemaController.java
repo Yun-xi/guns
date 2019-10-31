@@ -1,44 +1,126 @@
 package com.stylefeng.guns.rest.modular.cinema;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.baomidou.mybatisplus.plugins.Page;
 import com.stylefeng.guns.api.cinema.CinemaServiceAPI;
-import com.stylefeng.guns.api.cinema.vo.CinemaQueryVO;
+import com.stylefeng.guns.api.cinema.vo.*;
+import com.stylefeng.guns.api.order.OrderServiceAPI;
+import com.stylefeng.guns.rest.modular.cinema.vo.CinemaConditionResponseVO;
+import com.stylefeng.guns.rest.modular.cinema.vo.CinemaFieldResponseVO;
+import com.stylefeng.guns.rest.modular.cinema.vo.CinemaFieldsResponseVO;
 import com.stylefeng.guns.rest.modular.vo.ResponseVO;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.annotation.Order;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+import static com.stylefeng.guns.rest.modular.film.FilmController.IMG_PRE;
 
 /**
  * @author xieyaqi
  * @mail xieyaqi11@gmail.com
  * @date 2019-10-23 17:53
  */
+@Slf4j
 @RestController
 @RequestMapping("/cinema/")
 public class CinemaController {
 
-    @Reference(interfaceClass =CinemaServiceAPI.class, check = true)
+    @Reference(interfaceClass =CinemaServiceAPI.class, check = false)
     private CinemaServiceAPI cinemaServiceAPI;
+
+    @Reference(interfaceClass = OrderServiceAPI.class, check = false)
+    private OrderServiceAPI orderServiceAPI;
+
 
     @GetMapping("getCinemas")
     public ResponseVO getCinemas(CinemaQueryVO cinemaQueryVO) {
 
-        // 按照五个条件筛选
+        try {
+            // 按照五个条件筛选
+            Page<CinemaVO> cinemas = cinemaServiceAPI.getCinemas(cinemaQueryVO);
 
+            // 判断是否有满足条件的影院
+            if (cinemas.getRecords() == null || cinemas.getRecords().size() == 0) {
+                return ResponseVO.success("没有影院可查");
+            } else {
+                return ResponseVO.success(cinemas.getCurrent(), cinemas.getPages(), "", cinemas.getRecords());
+            }
 
-        return null;
+        } catch (Exception e) {
+            // 如果出现异常，应该如何处理
+            log.error("获取影院列表异常", e);
+            return ResponseVO.serviceFail("查询影院列表失败");
+        }
     }
 
+    /**
+     * 获取影院的查询条件
+     *
+     * 1、热点数据 -> 放缓存
+     *
+     * @param cinemaQueryVO
+     * @return
+     */
     @GetMapping("getCondition")
     public ResponseVO getCondition(CinemaQueryVO cinemaQueryVO) {
-        return null;
+
+        try {
+            // 获取三个集合，然后封装成一个对象返回即可
+            List<BrandVO> brands = cinemaServiceAPI.getBrands(cinemaQueryVO.getBrandId());
+            List<AreaVO> areas = cinemaServiceAPI.getAreas(cinemaQueryVO.getDistrictId());
+            List<HallTypeVO> hallTypes = cinemaServiceAPI.getHallTypes(cinemaQueryVO.getHallType());
+
+            CinemaConditionResponseVO cinemaConditionResponseVO = new CinemaConditionResponseVO();
+            cinemaConditionResponseVO.setBrandList(brands);
+            cinemaConditionResponseVO.setAreaList(areas);
+            cinemaConditionResponseVO.setHalltypeList(hallTypes);
+
+            return ResponseVO.success(cinemaConditionResponseVO);
+        } catch (Exception e) {
+            log.error("获取条件列表失败", e);
+            return ResponseVO.serviceFail("获取条件列表失败");
+        }
     }
 
     @GetMapping("getFields")
     public ResponseVO getFields(Integer cinemaId) {
-        return null;
+        try {
+            CinemaInfoVO cinemaInfoVO = cinemaServiceAPI.getCinemaInfoById(cinemaId);
+
+            List<FilmInfoVO> filmInfoVOList = cinemaServiceAPI.getFilmInfoByCinemaId(cinemaId);
+
+            CinemaFieldsResponseVO cinemaFieldsResponseVO = new CinemaFieldsResponseVO();
+            cinemaFieldsResponseVO.setCinemaInfo(cinemaInfoVO);
+            cinemaFieldsResponseVO.setFilmList(filmInfoVOList);
+
+            return ResponseVO.success(IMG_PRE, cinemaFieldsResponseVO);
+        } catch (Exception e) {
+            log.error("获取播放场次失败", e);
+            return ResponseVO.serviceFail("获取播放场次失败");
+        }
     }
 
     @PostMapping("getFieldInfo")
     public ResponseVO getFieldInfo(Integer cinemaId, Integer fieldId) {
-        return null;
+        try {
+
+            CinemaInfoVO cinemaInfoVO = cinemaServiceAPI.getCinemaInfoById(cinemaId);
+            FilmInfoVO filmInfoVO = cinemaServiceAPI.getFilmInfoByFieldId(fieldId);
+            HallInfoVO hallInfoVO = cinemaServiceAPI.getFilmFieldInfo(fieldId);
+
+            hallInfoVO.setSoldSeats(orderServiceAPI.getSoldSeatsByFieldId(fieldId));
+
+            CinemaFieldResponseVO cinemaFieldResponseVO = new CinemaFieldResponseVO();
+            cinemaFieldResponseVO.setCinemaInfo(cinemaInfoVO);
+            cinemaFieldResponseVO.setFilmInfo(filmInfoVO);
+            cinemaFieldResponseVO.setHallInfo(hallInfoVO);
+
+            return ResponseVO.success(IMG_PRE, cinemaFieldResponseVO);
+        } catch (Exception e) {
+            log.error("获取选座信息失败", e);
+            return ResponseVO.serviceFail("获取选座信息失败");
+        }
     }
 }

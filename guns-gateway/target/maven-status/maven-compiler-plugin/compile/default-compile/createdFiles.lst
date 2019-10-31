@@ -6,6 +6,8 @@ com\stylefeng\guns\rest\common\persistence\dao\UserMapper.class
 com\stylefeng\guns\rest\modular\vo\ResponseVO.class
 com\stylefeng\guns\rest\config\MybatisPlusConfig.class
 com\stylefeng\guns\rest\modular\user\UserImpl.class
+com\stylefeng\guns\rest\modular\cinema\vo\CinemaFieldResponseVO.class
+com\stylefeng\guns\rest\modular\cinema\vo\CinemaFieldsResponseVO.class
 com\stylefeng\guns\rest\modular\user\UserController.class
 com\stylefeng\guns\rest\modular\auth\util\JwtTokenUtil.class
 com\stylefeng\guns\rest\GatewayApplication.class
@@ -13,14 +15,17 @@ com\stylefeng\guns\rest\modular\auth\validator\impl\DbValidator.class
 com\stylefeng\guns\rest\modular\film\FilmController.class
 com\stylefeng\guns\rest\modular\auth\controller\AuthController.class
 com\stylefeng\guns\rest\modular\auth\validator\IReqValidator.class
+com\stylefeng\guns\rest\modular\cinema\vo\CinemaConditionResponseVO.class
 com\stylefeng\guns\rest\modular\auth\filter\AuthFilter.class
 com\stylefeng\guns\rest\modular\auth\converter\BaseTransferEntity.class
 com\stylefeng\guns\rest\config\properties\JwtProperties.class
 com\stylefeng\guns\rest\modular\film\vo\FilmRequestVO.class
+com\stylefeng\guns\rest\modular\cinema\vo\CinemaListResponseVO.class
 com\stylefeng\guns\rest\modular\client\Client.class
 com\stylefeng\guns\rest\common\exception\BussinessException.class
 com\stylefeng\guns\rest\common\exception\BizExceptionEnum.class
 com\stylefeng\guns\rest\modular\auth\security\DataSecurityAction.class
+com\stylefeng\guns\rest\modular\order\OrderController.class
 com\stylefeng\guns\rest\common\CurrentUser.class
 com\stylefeng\guns\rest\common\persistence\model\User.class
 com\stylefeng\guns\rest\modular\film\vo\FilmConditionVO.class

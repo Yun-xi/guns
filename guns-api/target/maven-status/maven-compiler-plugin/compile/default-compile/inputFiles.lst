@@ -6,14 +6,17 @@ D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\vo\FilmVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\cinema\vo\FilmFieldVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\cinema\vo\FilmInfoVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\cinema\vo\CinemaVO.java
+D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\order\vo\OrderVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\cinema\vo\BrandVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\vo\ActorRequestVO.java
+D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\cinema\vo\OrderQueryVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\vo\InfoRequestVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\vo\YearVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\FilmAsyncServiceApi.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\FilmServiceApi.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\vo\FilmDetailVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\cinema\vo\HallInfoVO.java
+D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\order\OrderServiceAPI.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\user\vo\UserInfoModel.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\cinema\CinemaServiceAPI.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\vo\SourceVO.java
