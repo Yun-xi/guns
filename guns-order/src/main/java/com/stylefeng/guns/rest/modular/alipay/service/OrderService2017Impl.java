@@ -1,4 +1,4 @@
-package com.stylefeng.guns.rest.modular.order.service;
+package com.stylefeng.guns.rest.modular.alipay.service;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
@@ -12,9 +12,7 @@ import com.stylefeng.guns.api.order.OrderServiceAPI;
 import com.stylefeng.guns.api.order.vo.OrderVO;
 import com.stylefeng.guns.core.util.UUIDUtil;
 import com.stylefeng.guns.rest.common.persistence.dao.MoocOrder2017TMapper;
-import com.stylefeng.guns.rest.common.persistence.dao.MoocOrderTMapper;
 import com.stylefeng.guns.rest.common.persistence.model.MoocOrder2017T;
-import com.stylefeng.guns.rest.common.persistence.model.MoocOrderT;
 import com.stylefeng.guns.rest.common.util.FTPUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

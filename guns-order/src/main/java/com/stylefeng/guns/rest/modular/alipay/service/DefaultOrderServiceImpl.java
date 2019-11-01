@@ -1,4 +1,4 @@
-package com.stylefeng.guns.rest.modular.order.service;
+package com.stylefeng.guns.rest.modular.alipay.service;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.stylefeng.guns.api.cinema.CinemaServiceAPI;
 import com.stylefeng.guns.api.cinema.vo.FilmInfoVO;
-import com.stylefeng.guns.api.cinema.vo.HallInfoVO;
 import com.stylefeng.guns.api.cinema.vo.OrderQueryVO;
 import com.stylefeng.guns.api.order.OrderServiceAPI;
 import com.stylefeng.guns.api.order.vo.OrderVO;
