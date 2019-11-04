@@ -51,4 +51,4 @@ logging:
   level.root: info
   level.com.stylefeng: debug
   path: logs/
-  file: guns-order.log
+  file: guns-alipay.log

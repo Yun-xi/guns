@@ -1,4 +1,5 @@
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\vo\ImgVO.java
+D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\alipay\vo\AliPayInfoVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\user\UserAPI.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\cinema\vo\HallTypeVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\vo\FilmDescVO.java
@@ -9,6 +10,8 @@ D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\cinema\vo\CinemaVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\order\vo\OrderVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\cinema\vo\BrandVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\vo\ActorRequestVO.java
+D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\alipay\AliPayServiceAPI.java
+D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\alipay\vo\AliPayResultVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\cinema\vo\OrderQueryVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\vo\InfoRequestVO.java
 D:\guns\guns-api\src\main\java\com\stylefeng\guns\api\film\vo\YearVO.java

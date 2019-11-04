@@ -21,10 +21,13 @@ com\stylefeng\guns\api\cinema\vo\FilmInfoVO.class
 com\stylefeng\guns\api\film\vo\FilmDescVO.class
 com\stylefeng\guns\api\cinema\vo\FilmFieldVO.class
 com\stylefeng\guns\api\film\FilmServiceApi.class
+com\stylefeng\guns\api\alipay\AliPayServiceAPI.class
 com\stylefeng\guns\api\cinema\vo\OrderQueryVO.class
 com\stylefeng\guns\api\film\vo\ActorRequestVO.class
 com\stylefeng\guns\api\film\vo\CatVO.class
+com\stylefeng\guns\api\alipay\vo\AliPayResultVO.class
 com\stylefeng\guns\api\cinema\CinemaServiceAPI.class
 com\stylefeng\guns\api\cinema\vo\CinemaVO.class
+com\stylefeng\guns\api\alipay\vo\AliPayInfoVO.class
 com\stylefeng\guns\api\film\vo\FilmVO.class
 com\stylefeng\guns\api\cinema\vo\CinemaQueryVO.class

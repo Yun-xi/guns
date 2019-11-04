@@ -36,6 +36,7 @@ com\stylefeng\guns\core\support\CollectionKit$1.class
 com\stylefeng\guns\core\support\BeanKit$1.class
 com\stylefeng\guns\core\support\ObjectKit.class
 com\stylefeng\guns\core\xss\XssHttpServletRequestWrapper.class
+com\stylefeng\guns\core\util\TokenBucket.class
 com\stylefeng\guns\core\node\ZTreeNode.class
 com\stylefeng\guns\core\support\WafKit.class
 com\stylefeng\guns\core\support\BeanKit$ValueProvider.class

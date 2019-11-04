@@ -42,6 +42,7 @@ D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\mutidatasource\config\Mu
 D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\util\MD5Util.java
 D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\base\tips\Tip.java
 D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\constant\IsMenu.java
+D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\util\TokenBucket.java
 D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\datasource\DruidProperties.java
 D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\xss\XssHttpServletRequestWrapper.java
 D:\guns\guns-core\src\main\java\com\stylefeng\guns\core\util\IdGenerator.java
