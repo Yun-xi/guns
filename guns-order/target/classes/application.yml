@@ -34,7 +34,7 @@ mybatis-plus:
 
 spring:
   application:
-    name: metting-gateway
+    name: metting-order
   dubbo:
     server: true
     registry: zookeeper://106.14.148.237:2181

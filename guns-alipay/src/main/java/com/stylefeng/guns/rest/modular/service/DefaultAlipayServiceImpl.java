@@ -20,6 +20,7 @@ import com.stylefeng.guns.rest.modular.alipay.service.AlipayTradeService;
 import com.stylefeng.guns.rest.modular.alipay.service.impl.AlipayMonitorServiceImpl;
 import com.stylefeng.guns.rest.modular.alipay.service.impl.AlipayTradeServiceImpl;
 import com.stylefeng.guns.rest.modular.alipay.service.impl.AlipayTradeWithHBServiceImpl;
+import com.stylefeng.guns.rest.modular.alipay.utils.ZxingUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -174,7 +175,7 @@ public class DefaultAlipayServiceImpl implements AliPayServiceAPI {
                 filePath = String.format("E:/zfb/qr-%s.png",
                         response.getOutTradeNo());
                 log.info("filePath:" + filePath);
-                //                ZxingUtils.getQRCodeImge(response.getQrCode(), 256, filePath);
+                ZxingUtils.getQRCodeImge(response.getQrCode(), 256, filePath);
                 break;
 
             case FAILED:
