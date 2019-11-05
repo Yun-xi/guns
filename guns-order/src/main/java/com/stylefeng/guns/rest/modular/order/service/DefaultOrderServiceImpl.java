@@ -46,7 +46,8 @@ public class DefaultOrderServiceImpl implements OrderServiceAPI {
     @Reference(interfaceClass = CinemaServiceAPI.class, check = false)
     private CinemaServiceAPI cinemaServiceAPI;
 
-    @Reference(interfaceClass = AliPayServiceAPI.class, check = false)
+//    @Reference(interfaceClass = AliPayServiceAPI.class, check = false)
+    @Autowired
     private AliPayServiceAPI aliPayServiceAPI;
 
 
