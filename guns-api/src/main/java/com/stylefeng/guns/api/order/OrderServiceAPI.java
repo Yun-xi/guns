@@ -33,4 +33,6 @@ public interface OrderServiceAPI {
     boolean paySuccess(String orderId);
 
     boolean payFail(String orderId);
+
+    public String goToBuy(String msg);
 }

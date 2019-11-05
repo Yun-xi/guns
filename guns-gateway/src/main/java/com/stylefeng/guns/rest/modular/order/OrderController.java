@@ -12,10 +12,7 @@ import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.rest.common.CurrentUser;
 import com.stylefeng.guns.rest.modular.vo.ResponseVO;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +35,8 @@ public class OrderController {
     private OrderServiceAPI orderServiceAPI2017;
     @Reference(interfaceClass = AliPayServiceAPI.class, check = false)
     private AliPayServiceAPI aliPayServiceAPI;
+    @Reference(interfaceClass = OrderServiceAPI.class, check = false, group = "default")
+    private OrderServiceAPI defaultOrderServiceAPI;
 
 
     @PostMapping("buyTickets")
@@ -139,5 +138,11 @@ public class OrderController {
             }
             return ResponseVO.success(aliPayResultVO);
         }
+    }
+
+    @GetMapping("buy")
+    public ResponseVO buy(String msg) {
+        String s = orderServiceAPI.goToBuy(msg);
+        return ResponseVO.success(s);
     }
 }

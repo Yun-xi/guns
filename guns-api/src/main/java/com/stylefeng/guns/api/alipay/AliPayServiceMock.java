@@ -23,4 +23,9 @@ public class AliPayServiceMock implements AliPayServiceAPI {
         aliPayResultVO.setOrderMsg("尚未支付成功");
         return aliPayResultVO;
     }
+
+    @Override
+    public String buy(String msg) {
+        return null;
+    }
 }

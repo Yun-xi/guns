@@ -40,7 +40,7 @@ public class OrderService2017Impl implements OrderServiceAPI {
     @Autowired
     private FTPUtil ftpUtil;
 
-    @Reference(interfaceClass = CinemaServiceAPI.class)
+    @Reference(interfaceClass = CinemaServiceAPI.class, check = false)
     private CinemaServiceAPI cinemaServiceAPI;
 
     @Override
@@ -213,5 +213,10 @@ public class OrderService2017Impl implements OrderServiceAPI {
         Integer integer = moocOrderTMapper.updateById(moocOrderT);
 
         return integer >= 1;
+    }
+
+    @Override
+    public String goToBuy(String msg) {
+        return null;
     }
 }

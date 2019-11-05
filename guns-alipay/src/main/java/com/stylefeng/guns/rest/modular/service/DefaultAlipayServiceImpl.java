@@ -25,6 +25,8 @@ import com.stylefeng.guns.rest.modular.alipay.service.impl.AlipayTradeWithHBServ
 import com.stylefeng.guns.rest.modular.alipay.utils.ZxingUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.net.ftp.FTPClient;
+import org.mengyun.tcctransaction.api.Compensable;
+import org.mengyun.tcctransaction.dubbo.context.DubboTransactionContextEditor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -104,6 +106,8 @@ public class DefaultAlipayServiceImpl implements AliPayServiceAPI {
 
         boolean isSuccess = trade_query(orderId);
         if (isSuccess) {
+            orderServiceAPI.paySuccess(orderId);
+
             AliPayResultVO aliPayResultVO = new AliPayResultVO();
             aliPayResultVO.setOrderId(orderId);
             aliPayResultVO.setOrderStatus(1);
@@ -250,5 +254,27 @@ public class DefaultAlipayServiceImpl implements AliPayServiceAPI {
         }
 
         return flag;
+    }
+
+
+    @Override
+    @Compensable(confirmMethod = "confirmBuy", cancelMethod = "cancelBuy", transactionContextEditor = DubboTransactionContextEditor.class)
+    public String buy(String msg) {
+        System.out.println("buy : " + msg);
+
+        if (msg.equals("123")) {
+            throw new NullPointerException();
+        }
+        return "buy : " + msg;
+    }
+
+    public String confirmBuy(String msg) {
+        System.out.println("confirmBuy : " + msg);
+        return "confirmBuy : " + msg;
+    }
+
+    public String cancelBuy(String msg) {
+        System.out.println("cancelBuy : " + msg);
+        return "cancelBuy : " + msg;
     }
 }

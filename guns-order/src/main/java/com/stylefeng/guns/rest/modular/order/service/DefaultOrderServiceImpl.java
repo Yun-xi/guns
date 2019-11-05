@@ -5,6 +5,7 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
+import com.stylefeng.guns.api.alipay.AliPayServiceAPI;
 import com.stylefeng.guns.api.cinema.CinemaServiceAPI;
 import com.stylefeng.guns.api.cinema.vo.FilmInfoVO;
 import com.stylefeng.guns.api.cinema.vo.OrderQueryVO;
@@ -15,9 +16,12 @@ import com.stylefeng.guns.rest.common.persistence.dao.MoocOrderTMapper;
 import com.stylefeng.guns.rest.common.persistence.model.MoocOrderT;
 import com.stylefeng.guns.rest.common.util.FTPUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.mengyun.tcctransaction.api.Compensable;
+import org.mengyun.tcctransaction.dubbo.context.DubboTransactionContextEditor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.sound.midi.Soundbank;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
@@ -39,8 +43,12 @@ public class DefaultOrderServiceImpl implements OrderServiceAPI {
     @Autowired
     private FTPUtil ftpUtil;
 
-    @Reference(interfaceClass = CinemaServiceAPI.class)
+    @Reference(interfaceClass = CinemaServiceAPI.class, check = false)
     private CinemaServiceAPI cinemaServiceAPI;
+
+    @Reference(interfaceClass = AliPayServiceAPI.class, check = false)
+    private AliPayServiceAPI aliPayServiceAPI;
+
 
     @Override
     public boolean isTrueSeats(String fieldId, String seats) {
@@ -212,5 +220,29 @@ public class DefaultOrderServiceImpl implements OrderServiceAPI {
         Integer integer = moocOrderTMapper.updateById(moocOrderT);
 
         return integer >= 1;
+    }
+
+    @Override
+    @Compensable(confirmMethod = "confirmGoToBuy", cancelMethod = "cancelGoToBuy", transactionContextEditor =
+            DubboTransactionContextEditor.class)
+    public String goToBuy(String msg) {
+        System.out.println("this is consumer messgae : " + msg);
+
+        String result = aliPayServiceAPI.buy(msg);
+        System.out.println(result);
+
+        return result;
+    }
+
+    public String confirmGoToBuy(String msg) {
+        System.out.println("this is consumer messgae : " + msg);
+
+        return null;
+    }
+
+    public String cancelGoToBuy(String msg) {
+        System.out.println("this is consumer messgae : " + msg);
+
+        return null;
     }
 }

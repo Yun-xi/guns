@@ -2,6 +2,7 @@ package com.stylefeng.guns.rest.modular.order.service;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
+import com.alibaba.dubbo.rpc.RpcContext;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
@@ -40,7 +41,7 @@ public class OrderService2018Impl implements OrderServiceAPI {
     @Autowired
     private FTPUtil ftpUtil;
 
-    @Reference(interfaceClass = CinemaServiceAPI.class)
+    @Reference(interfaceClass = CinemaServiceAPI.class,  check = false)
     private CinemaServiceAPI cinemaServiceAPI;
 
     @Override
@@ -195,6 +196,9 @@ public class OrderService2018Impl implements OrderServiceAPI {
 
     @Override
     public boolean paySuccess(String orderId) {
+        String userId = RpcContext.getContext().getAttachment("userId");
+        log.info("DefaultAlipayServiceImpl - getOrderStatus - userId : " + userId);
+
         MoocOrder2018T moocOrderT = new MoocOrder2018T();
         moocOrderT.setUuid(orderId);
         moocOrderT.setOrderStatus(1);
@@ -213,5 +217,10 @@ public class OrderService2018Impl implements OrderServiceAPI {
         Integer integer = moocOrderTMapper.updateById(moocOrderT);
 
         return integer >= 1;
+    }
+
+    @Override
+    public String goToBuy(String msg) {
+        return null;
     }
 }
