@@ -1,6 +1,7 @@
 package com.stylefeng.guns.rest.modular.order;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.alibaba.dubbo.rpc.RpcContext;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.stylefeng.guns.api.alipay.AliPayServiceAPI;
 import com.stylefeng.guns.api.alipay.vo.AliPayInfoVO;
@@ -118,6 +119,9 @@ public class OrderController {
         if (userId == null || userId.trim().length() == 0) {
             return ResponseVO.serviceFail("抱歉，用户未登录");
         }
+
+        // 将当前登录人的信息传递给后端
+        RpcContext.getContext().setAttachment("userId", userId);
 
         // 判断是否支付超时
         if (tryNums >= 4) {
