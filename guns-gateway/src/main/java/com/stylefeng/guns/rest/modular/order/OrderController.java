@@ -8,6 +8,7 @@ import com.stylefeng.guns.api.alipay.vo.AliPayInfoVO;
 import com.stylefeng.guns.api.alipay.vo.AliPayResultVO;
 import com.stylefeng.guns.api.order.OrderServiceAPI;
 import com.stylefeng.guns.api.order.vo.OrderVO;
+import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.rest.common.CurrentUser;
 import com.stylefeng.guns.rest.modular.vo.ResponseVO;
 import lombok.extern.slf4j.Slf4j;
@@ -114,7 +115,8 @@ public class OrderController {
 
 
     @PostMapping("getPayResult")
-    public ResponseVO getPayResult(@RequestParam("orderId") String orderId, @RequestParam("tryNums") Integer tryNums) {
+    public ResponseVO getPayResult(@RequestParam("orderId") String orderId,
+                                   @RequestParam(value = "tryNums", required = false, defaultValue = "1") Integer tryNums) {
         String userId = CurrentUser.getCurrentUserId();
         if (userId == null || userId.trim().length() == 0) {
             return ResponseVO.serviceFail("抱歉，用户未登录");
@@ -128,6 +130,13 @@ public class OrderController {
             return ResponseVO.serviceFail("订单支付失败，请稍后再试");
         } else {
             AliPayResultVO aliPayResultVO = aliPayServiceAPI.getOrderStatus(orderId);
+            if (aliPayResultVO == null || ToolUtil.isEmpty(aliPayResultVO.getOrderId())) {
+                AliPayResultVO serviceFailVO = new AliPayResultVO();
+                serviceFailVO.setOrderId(orderId);
+                serviceFailVO.setOrderStatus(0);
+                serviceFailVO.setOrderMsg("未成功支付");
+                return ResponseVO.success(serviceFailVO);
+            }
             return ResponseVO.success(aliPayResultVO);
         }
     }

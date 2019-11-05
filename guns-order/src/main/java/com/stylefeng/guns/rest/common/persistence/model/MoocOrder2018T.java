@@ -5,7 +5,10 @@ import java.io.Serializable;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
+import org.springframework.context.annotation.Primary;
+
 import java.io.Serializable;
 
 /**
@@ -24,7 +27,7 @@ public class MoocOrder2018T extends Model<MoocOrder2018T> {
     /**
      * 主键编号
      */
-	@TableField("UUID")
+	@TableId("UUID")
 	private String uuid;
     /**
      * 影院编号
