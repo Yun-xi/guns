@@ -11,6 +11,7 @@ com\stylefeng\guns\rest\modular\alipay\model\builder\RequestBuilder.class
 com\stylefeng\guns\rest\modular\alipay\model\result\AlipayF2FPayResult.class
 com\stylefeng\guns\rest\modular\alipay\model\GoodsDetail.class
 com\stylefeng\guns\rest\modular\alipay\model\builder\AlipayHeartbeatSynRequestBuilder.class
+com\stylefeng\guns\rest\config\TCCConfig.class
 com\stylefeng\guns\rest\modular\alipay\model\builder\AlipayHeartbeatSynRequestBuilder$BizContent.class
 com\stylefeng\guns\rest\modular\auth\validator\IReqValidator.class
 com\stylefeng\guns\rest\modular\alipay\service\impl\hb\HbListener.class

@@ -5,6 +5,7 @@ TTT\IMoocFilmTService.class
 TTT\IMoocSourceDictTService.class
 com\stylefeng\guns\rest\modular\auth\controller\dto\AuthRequest.class
 TTT\IMoocYearDictTService.class
+com\stylefeng\guns\rest\config\TCCConfig.class
 com\stylefeng\guns\rest\modular\auth\validator\IReqValidator.class
 com\stylefeng\guns\rest\modular\auth\filter\AuthFilter.class
 com\stylefeng\guns\rest\modular\film\service\DefaultFilmServiceImpl.class

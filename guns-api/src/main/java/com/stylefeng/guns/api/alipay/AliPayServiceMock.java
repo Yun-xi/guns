@@ -9,8 +9,8 @@ import com.stylefeng.guns.api.alipay.vo.AliPayResultVO;
  * @mail xieyaqi11@gmail.com
  * @date 2019-11-05 10:38
  */
-public class AliPayServiceMock implements AliPayServiceAPI {
-    @Override
+public class AliPayServiceMock {
+    /*@Override
     public AliPayInfoVO getQrCode(String orderId) {
         return null;
     }
@@ -28,4 +28,12 @@ public class AliPayServiceMock implements AliPayServiceAPI {
     public String buy(String msg) {
         return null;
     }
+
+    @Override
+    public void confirmBuy(String msg) {
+    }
+
+    @Override
+    public void cancelBuy(String msg) {
+    }*/
 }

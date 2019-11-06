@@ -6,12 +6,14 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.stylefeng.guns.api.alipay.AliPayServiceAPI;
 import com.stylefeng.guns.api.alipay.vo.AliPayInfoVO;
 import com.stylefeng.guns.api.alipay.vo.AliPayResultVO;
+import com.stylefeng.guns.api.film.FilmServiceApi;
 import com.stylefeng.guns.api.order.OrderServiceAPI;
 import com.stylefeng.guns.api.order.vo.OrderVO;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.rest.common.CurrentUser;
 import com.stylefeng.guns.rest.modular.vo.ResponseVO;
 import lombok.extern.slf4j.Slf4j;
+import org.mengyun.tcctransaction.api.Compensable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -35,8 +37,8 @@ public class OrderController {
     private OrderServiceAPI orderServiceAPI2017;
     @Reference(interfaceClass = AliPayServiceAPI.class, check = false)
     private AliPayServiceAPI aliPayServiceAPI;
-    @Reference(interfaceClass = OrderServiceAPI.class, check = false, group = "default")
-    private OrderServiceAPI defaultOrderServiceAPI;
+    @Reference(interfaceClass = FilmServiceApi.class, check = false, timeout = 50000)
+    private FilmServiceApi filmServiceApi;
 
 
     @PostMapping("buyTickets")
@@ -141,8 +143,9 @@ public class OrderController {
     }
 
     @GetMapping("buy")
+    @Compensable
     public ResponseVO buy(String msg) {
-        String s = orderServiceAPI.goToBuy(msg);
+        String s = filmServiceApi.goToBuy(msg);
         return ResponseVO.success(s);
     }
 }

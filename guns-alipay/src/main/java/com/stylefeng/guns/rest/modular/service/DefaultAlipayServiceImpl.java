@@ -41,7 +41,7 @@ import java.util.List;
  */
 @Slf4j
 @Component
-@Service(interfaceClass = AliPayServiceAPI.class, mock = "com.stylefeng.guns.api.alipay.AliPayServiceMock")
+@Service(interfaceClass = AliPayServiceAPI.class)
 public class DefaultAlipayServiceImpl implements AliPayServiceAPI {
 
     @Reference(interfaceClass = OrderServiceAPI.class, check = false, group = "order2018")
@@ -268,13 +268,13 @@ public class DefaultAlipayServiceImpl implements AliPayServiceAPI {
         return "buy : " + msg;
     }
 
-    public String confirmBuy(String msg) {
+//    @Override
+    public void confirmBuy(String msg) {
         System.out.println("confirmBuy : " + msg);
-        return "confirmBuy : " + msg;
     }
 
-    public String cancelBuy(String msg) {
+//    @Override
+    public void cancelBuy(String msg) {
         System.out.println("cancelBuy : " + msg);
-        return "cancelBuy : " + msg;
     }
 }

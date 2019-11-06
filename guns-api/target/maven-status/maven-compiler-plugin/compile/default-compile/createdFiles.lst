@@ -21,6 +21,7 @@ com\stylefeng\guns\api\cinema\vo\FilmInfoVO.class
 com\stylefeng\guns\api\film\vo\FilmDescVO.class
 com\stylefeng\guns\api\cinema\vo\FilmFieldVO.class
 com\stylefeng\guns\api\film\FilmServiceApi.class
+com\stylefeng\guns\api\alipay\AliPayServiceMock.class
 com\stylefeng\guns\api\alipay\AliPayServiceAPI.class
 com\stylefeng\guns\api\cinema\vo\OrderQueryVO.class
 com\stylefeng\guns\api\film\vo\ActorRequestVO.class

@@ -1,13 +1,17 @@
 package com.stylefeng.guns.rest.modular.film.service;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
+import com.stylefeng.guns.api.alipay.AliPayServiceAPI;
 import com.stylefeng.guns.api.film.FilmServiceApi;
 import com.stylefeng.guns.api.film.vo.*;
 import com.stylefeng.guns.core.util.DateUtil;
 import com.stylefeng.guns.rest.common.persistence.dao.*;
 import com.stylefeng.guns.rest.common.persistence.model.*;
+import org.mengyun.tcctransaction.api.Compensable;
+import org.mengyun.tcctransaction.dubbo.context.DubboTransactionContextEditor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -38,6 +42,9 @@ public class DefaultFilmServiceImpl implements FilmServiceApi {
     @Autowired
     private MoocActorTMapper moocActorTMapper;
 
+//    @Reference(interfaceClass = AliPayServiceAPI.class, check = false)
+    @Autowired
+    private AliPayServiceAPI aliPayServiceAPI;
 
     @Override
     public List<BannerVO> getBanners() {
@@ -424,5 +431,27 @@ public class DefaultFilmServiceImpl implements FilmServiceApi {
 
         List<ActorVO> actors = moocActorTMapper.getActors(filmId);
         return actors;
+    }
+
+    @Override
+    @Compensable(confirmMethod = "confirmGoToBuy", cancelMethod = "cancelGoToBuy", transactionContextEditor =
+            DubboTransactionContextEditor.class)
+    public String goToBuy(String msg) {
+        System.out.println("this is consumer messgae : " + msg);
+
+        String result = aliPayServiceAPI.buy(msg);
+        System.out.println(result);
+
+        return result;
+    }
+
+//    @Override
+    public void confirmGoToBuy(String msg) {
+        System.out.println("this is confirm messgae : " + msg);
+    }
+
+//    @Override
+    public void cancelGoToBuy(String msg) {
+        System.out.println("this is cancel messgae : " + msg);
     }
 }

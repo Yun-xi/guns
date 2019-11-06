@@ -7,4 +7,13 @@
        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <dubbo:provider proxy="tccJavassist"/>
+
+    <dubbo:application name="metting-order"/>
+
+    <dubbo:registry protocol="zookeeper" address="106.14.148.237:2181"/>
+    
+    <dubbo:reference
+            id="aliPayServiceAPI"
+            interface="com.stylefeng.guns.api.alipay.AliPayServiceAPI"
+            check="false"/>
 </beans>

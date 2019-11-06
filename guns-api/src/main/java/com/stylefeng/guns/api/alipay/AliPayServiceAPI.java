@@ -12,4 +12,8 @@ public interface AliPayServiceAPI {
 
     @Compensable
     String buy(String msg);
+
+//    void confirmBuy(String msg);
+//
+//    void cancelBuy(String msg);
 }

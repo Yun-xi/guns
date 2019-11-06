@@ -1,6 +1,7 @@
 package com.stylefeng.guns.api.film;
 
 import com.stylefeng.guns.api.film.vo.*;
+import org.mengyun.tcctransaction.api.Compensable;
 
 import java.util.List;
 
@@ -51,4 +52,11 @@ public interface FilmServiceApi {
 
     // 获取演员信息
     List<ActorVO> getActors(String filmId);
+
+    @Compensable
+    String goToBuy(String msg);
+
+//    void confirmGoToBuy(String msg);
+//
+//    void cancelGoToBuy(String msg);
 }

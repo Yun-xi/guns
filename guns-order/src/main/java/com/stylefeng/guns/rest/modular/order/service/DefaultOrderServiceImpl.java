@@ -236,13 +236,13 @@ public class DefaultOrderServiceImpl implements OrderServiceAPI {
     }
 
     public String confirmGoToBuy(String msg) {
-        System.out.println("this is consumer messgae : " + msg);
+        System.out.println("this is confirm messgae : " + msg);
 
         return null;
     }
 
     public String cancelGoToBuy(String msg) {
-        System.out.println("this is consumer messgae : " + msg);
+        System.out.println("this is cancel messgae : " + msg);
 
         return null;
     }

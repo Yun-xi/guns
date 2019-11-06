@@ -30,7 +30,7 @@ public class CinemaController {
     @Reference(interfaceClass =CinemaServiceAPI.class, check = false)
     private CinemaServiceAPI cinemaServiceAPI;
 
-    @Reference(interfaceClass = OrderServiceAPI.class, check = false)
+    @Reference(interfaceClass = OrderServiceAPI.class, check = false, group = "order2018")
     private OrderServiceAPI orderServiceAPI;
 
 

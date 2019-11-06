@@ -5,6 +5,7 @@ com\stylefeng\guns\rest\modular\auth\controller\dto\AuthRequest.class
 com\stylefeng\guns\rest\config\MybatisPlusConfig.class
 com\stylefeng\guns\rest\common\persistence\model\MoocOrderT.class
 com\stylefeng\guns\rest\modular\auth\util\JwtTokenUtil.class
+com\stylefeng\guns\rest\config\TCCConfig.class
 com\stylefeng\guns\rest\modular\auth\controller\AuthController.class
 com\stylefeng\guns\rest\modular\auth\validator\IReqValidator.class
 com\stylefeng\guns\rest\common\util\FTPUtil.class
