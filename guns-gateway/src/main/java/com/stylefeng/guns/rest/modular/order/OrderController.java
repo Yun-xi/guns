@@ -143,7 +143,7 @@ public class OrderController {
     }
 
     @GetMapping("buy")
-    @Compensable
+//    @Compensable
     public ResponseVO buy(String msg) {
         String s = filmServiceApi.goToBuy(msg);
         return ResponseVO.success(s);

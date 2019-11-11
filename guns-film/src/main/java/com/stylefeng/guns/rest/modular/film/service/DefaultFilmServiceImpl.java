@@ -434,8 +434,7 @@ public class DefaultFilmServiceImpl implements FilmServiceApi {
     }
 
     @Override
-    @Compensable(confirmMethod = "confirmGoToBuy", cancelMethod = "cancelGoToBuy", transactionContextEditor =
-            DubboTransactionContextEditor.class)
+    @Compensable(confirmMethod = "confirmGoToBuy", cancelMethod = "cancelGoToBuy")
     public String goToBuy(String msg) {
         System.out.println("this is consumer messgae : " + msg);
 
