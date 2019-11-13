@@ -25,6 +25,7 @@ com\stylefeng\guns\rest\modular\client\Client.class
 com\stylefeng\guns\rest\common\exception\BussinessException.class
 com\stylefeng\guns\rest\common\exception\BizExceptionEnum.class
 com\stylefeng\guns\rest\modular\auth\security\DataSecurityAction.class
+com\stylefeng\guns\rest\config\TraceConfig.class
 com\stylefeng\guns\rest\modular\order\OrderController.class
 com\stylefeng\guns\rest\common\CurrentUser.class
 com\stylefeng\guns\rest\common\persistence\model\User.class

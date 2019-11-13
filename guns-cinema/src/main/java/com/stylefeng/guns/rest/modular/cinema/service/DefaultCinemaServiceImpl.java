@@ -20,7 +20,7 @@ import java.util.List;
  * @date 2019-10-24 10:13
  */
 @Component
-@Service(interfaceClass = CinemaServiceAPI.class)
+@Service(interfaceClass = CinemaServiceAPI.class, filter = "tracing")
 public class DefaultCinemaServiceImpl implements CinemaServiceAPI {
 
     @Autowired

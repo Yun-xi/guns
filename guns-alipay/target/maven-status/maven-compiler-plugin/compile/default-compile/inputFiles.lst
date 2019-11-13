@@ -34,6 +34,7 @@ D:\guns\guns-alipay\src\main\java\com\stylefeng\guns\rest\modular\alipay\service
 D:\guns\guns-alipay\src\main\java\com\stylefeng\guns\rest\modular\alipay\utils\ZxingUtils.java
 D:\guns\guns-alipay\src\main\java\com\stylefeng\guns\rest\modular\auth\controller\dto\AuthResponse.java
 D:\guns\guns-alipay\src\main\java\com\stylefeng\guns\rest\modular\alipay\service\impl\AlipayTradeServiceImpl.java
+D:\guns\guns-alipay\src\main\java\com\stylefeng\guns\rest\config\TraceConfig.java
 D:\guns\guns-alipay\src\main\java\com\stylefeng\guns\rest\modular\alipay\model\builder\AlipayTradeQueryRequestBuilder.java
 D:\guns\guns-alipay\src\main\java\com\stylefeng\guns\rest\modular\alipay\model\builder\AlipayTradeRefundRequestBuilder.java
 D:\guns\guns-alipay\src\main\java\com\stylefeng\guns\rest\modular\alipay\model\hb\TradeInfo.java

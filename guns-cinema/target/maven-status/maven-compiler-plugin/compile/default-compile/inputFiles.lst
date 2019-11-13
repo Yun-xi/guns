@@ -14,6 +14,7 @@ D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\modular\auth\converter
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\common\persistence\dao\MoocBrandDictTMapper.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\common\persistence\model\MoocCinemaT.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\modular\auth\validator\IReqValidator.java
+D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\config\TraceConfig.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\config\MybatisPlusConfig.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\config\properties\JwtProperties.java
 D:\guns\guns-cinema\src\main\java\com\stylefeng\guns\rest\common\persistence\model\MoocHallFilmInfoT.java

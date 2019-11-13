@@ -17,6 +17,7 @@ com\stylefeng\guns\rest\modular\order\service\OrderService2017Impl.class
 com\stylefeng\guns\rest\common\exception\BussinessException.class
 com\stylefeng\guns\rest\common\exception\BizExceptionEnum.class
 com\stylefeng\guns\rest\modular\auth\security\DataSecurityAction.class
+com\stylefeng\guns\rest\config\TraceConfig.class
 com\stylefeng\guns\rest\OrderApplication.class
 com\stylefeng\guns\rest\modular\auth\security\impl\Base64SecurityAction.class
 com\stylefeng\guns\rest\modular\auth\validator\dto\Credence.class

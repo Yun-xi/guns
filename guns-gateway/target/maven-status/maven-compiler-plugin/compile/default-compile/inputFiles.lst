@@ -1,5 +1,6 @@
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\common\CurrentUser.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\film\vo\FilmConditionVO.java
+D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\config\TraceConfig.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\modular\example\ExampleController.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\common\exception\BussinessException.java
 D:\guns\guns-gateway\src\main\java\com\stylefeng\guns\rest\GatewayApplication.java

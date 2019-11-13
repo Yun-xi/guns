@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    @Reference(interfaceClass = UserAPI.class, check = false)
+    @Reference(interfaceClass = UserAPI.class, check = false, filter = "tracing")
     private UserAPI userAPI;
 
     @RequestMapping("register")

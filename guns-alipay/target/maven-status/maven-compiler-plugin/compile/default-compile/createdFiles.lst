@@ -23,6 +23,7 @@ com\stylefeng\guns\rest\common\exception\BizExceptionEnum.class
 com\stylefeng\guns\rest\modular\auth\security\DataSecurityAction.class
 com\stylefeng\guns\rest\modular\alipay\model\hb\TradeInfo.class
 com\stylefeng\guns\rest\modular\alipay\service\impl\AlipayTradeWithHBServiceImpl$2.class
+com\stylefeng\guns\rest\config\TraceConfig.class
 com\stylefeng\guns\rest\modular\alipay\model\hb\SysTradeInfo.class
 com\stylefeng\guns\rest\modular\auth\validator\dto\Credence.class
 com\stylefeng\guns\rest\config\MessageConverConfig.class

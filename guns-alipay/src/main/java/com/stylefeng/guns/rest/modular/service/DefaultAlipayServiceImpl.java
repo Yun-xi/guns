@@ -41,10 +41,10 @@ import java.util.List;
  */
 @Slf4j
 @Component
-@Service(interfaceClass = AliPayServiceAPI.class)
+@Service(interfaceClass = AliPayServiceAPI.class, filter = "tracing")
 public class DefaultAlipayServiceImpl implements AliPayServiceAPI {
 
-    @Reference(interfaceClass = OrderServiceAPI.class, check = false, group = "order2018")
+    @Reference(interfaceClass = OrderServiceAPI.class, check = false, group = "order2018", filter = "tracing")
     private OrderServiceAPI orderServiceAPI;
 
     @Autowired
@@ -195,7 +195,8 @@ public class DefaultAlipayServiceImpl implements AliPayServiceAPI {
                 log.info("filePath:" + filePath);
                 File qrCodeImge = ZxingUtils.getQRCodeImge(response.getQrCode(), 256, filePath);
 
-                boolean isSuccess = ftpUtil.uploadFile(fileName, qrCodeImge);
+//                boolean isSuccess = ftpUtil.uploadFile(fileName, qrCodeImge);
+                boolean isSuccess = true;
                 if (!isSuccess) {
                     filePath = "";
                     log.error("二维码上传失败！");
@@ -268,12 +269,10 @@ public class DefaultAlipayServiceImpl implements AliPayServiceAPI {
         return "buy : " + msg;
     }
 
-//    @Override
     public void confirmBuy(String msg) {
         System.out.println("confirmBuy : " + msg);
     }
 
-//    @Override
     public void cancelBuy(String msg) {
         System.out.println("cancelBuy : " + msg);
     }

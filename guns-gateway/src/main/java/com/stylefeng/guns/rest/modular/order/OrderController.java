@@ -6,14 +6,12 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.stylefeng.guns.api.alipay.AliPayServiceAPI;
 import com.stylefeng.guns.api.alipay.vo.AliPayInfoVO;
 import com.stylefeng.guns.api.alipay.vo.AliPayResultVO;
-import com.stylefeng.guns.api.film.FilmServiceApi;
 import com.stylefeng.guns.api.order.OrderServiceAPI;
 import com.stylefeng.guns.api.order.vo.OrderVO;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.rest.common.CurrentUser;
 import com.stylefeng.guns.rest.modular.vo.ResponseVO;
 import lombok.extern.slf4j.Slf4j;
-import org.mengyun.tcctransaction.api.Compensable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -31,14 +29,14 @@ public class OrderController {
 
     private static final String IMG_PRE = "http://img.mettingshop.cn/";
 
-    @Reference(interfaceClass = OrderServiceAPI.class, check = false, group = "order2018")
+    @Reference(interfaceClass = OrderServiceAPI.class, check = false, group = "order2018", filter = "tracing")
     private OrderServiceAPI orderServiceAPI;
-    @Reference(interfaceClass = OrderServiceAPI.class, check = false, group = "order2017")
+    @Reference(interfaceClass = OrderServiceAPI.class, check = false, group = "order2017", filter = "tracing")
     private OrderServiceAPI orderServiceAPI2017;
-    @Reference(interfaceClass = AliPayServiceAPI.class, check = false)
+    @Reference(interfaceClass = AliPayServiceAPI.class, check = false, filter = "tracing")
     private AliPayServiceAPI aliPayServiceAPI;
-    @Reference(interfaceClass = FilmServiceApi.class, check = false, timeout = 50000)
-    private FilmServiceApi filmServiceApi;
+    /*@Reference(interfaceClass = FilmServiceApi.class, check = false, timeout = 50000, filter = "tracing")
+    private FilmServiceApi filmServiceApi;*/
 
 
     @PostMapping("buyTickets")
@@ -142,10 +140,9 @@ public class OrderController {
         }
     }
 
-    @GetMapping("buy")
-//    @Compensable
+    /*@GetMapping("buy")
     public ResponseVO buy(String msg) {
         String s = filmServiceApi.goToBuy(msg);
         return ResponseVO.success(s);
-    }
+    }*/
 }

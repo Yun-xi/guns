@@ -20,6 +20,7 @@ D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\modular\auth\controller
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\common\persistence\dao\MoocOrderTMapper.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\modular\order\service\OrderService2018Impl.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\common\persistence\model\MoocOrderT.java
+D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\config\TraceConfig.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\common\persistence\dao\MoocOrder2017TMapper.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\modular\auth\controller\dto\AuthResponse.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\common\persistence\dao\MoocOrder2018TMapper.java

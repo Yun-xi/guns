@@ -444,12 +444,10 @@ public class DefaultFilmServiceImpl implements FilmServiceApi {
         return result;
     }
 
-//    @Override
     public void confirmGoToBuy(String msg) {
         System.out.println("this is confirm messgae : " + msg);
     }
 
-//    @Override
     public void cancelGoToBuy(String msg) {
         System.out.println("this is cancel messgae : " + msg);
     }

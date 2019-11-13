@@ -32,7 +32,7 @@ import java.util.List;
  */
 @Slf4j
 @Component
-@Service(interfaceClass = OrderServiceAPI.class, group = "order2018")
+@Service(interfaceClass = OrderServiceAPI.class, group = "order2018", filter = "tracing")
 public class OrderService2018Impl implements OrderServiceAPI {
 
     @Autowired
@@ -41,7 +41,7 @@ public class OrderService2018Impl implements OrderServiceAPI {
     @Autowired
     private FTPUtil ftpUtil;
 
-    @Reference(interfaceClass = CinemaServiceAPI.class,  check = false)
+    @Reference(interfaceClass = CinemaServiceAPI.class,  check = false, filter = "tracing")
     private CinemaServiceAPI cinemaServiceAPI;
 
     @Override
