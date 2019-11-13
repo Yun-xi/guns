@@ -10,6 +10,7 @@ D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\modular\auth\util\JwtTo
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\common\util\FTPUtil.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\OrderApplication.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\modular\order\service\OrderService2017Impl.java
+D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\config\DatasourceConfig.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\config\MessageConverConfig.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\modular\auth\security\DataSecurityAction.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\config\WebConfig.java
@@ -23,6 +24,7 @@ D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\common\persistence\mode
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\config\TraceConfig.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\common\persistence\dao\MoocOrder2017TMapper.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\modular\auth\controller\dto\AuthResponse.java
+D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\config\MybatisConfig.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\common\persistence\dao\MoocOrder2018TMapper.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\config\properties\RestProperties.java
 D:\guns\guns-order\src\main\java\com\stylefeng\guns\rest\common\exception\BussinessException.java
